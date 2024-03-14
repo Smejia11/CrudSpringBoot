@@ -34,27 +34,16 @@ public class UserController {
 	public ResponseEntity<Object> updateUser(@RequestBody DtoUser user, @RequestParam Long userId) {
 		userService.updateUser(userId, user);
 		return ResponseEntity.status(HttpStatus.OK).body(user);
-
 	}
 
 	@DeleteMapping
 	public ResponseEntity<Object> deleteUser(@RequestParam Long userId) {
-		try {
-			return ResponseEntity.status(HttpStatus.OK).body(userService.deleteUser(userId));
-		} catch (DataAccessException e) {
-			// Error al acceder a la base de datos
-			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error accessing the database");
-		} catch (RuntimeException e) {
-			// Otra excepción de tiempo de ejecución
-			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("An unexpected error occurred");
-		}
-
+		return ResponseEntity.status(HttpStatus.OK).body(userService.deleteUser(userId));
 	}
 
 	@GetMapping
 	public ResponseEntity<Object> getUserId(@RequestParam Long userId) {
 		return ResponseEntity.status(HttpStatus.OK).body(userService.getUserId(userId));
-
 	}
 
 }
