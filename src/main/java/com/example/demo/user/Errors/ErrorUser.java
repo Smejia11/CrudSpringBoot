@@ -1,4 +1,4 @@
-package com.example.demo.user;
+package com.example.demo.user.Errors;
 
 import java.util.Optional;
 

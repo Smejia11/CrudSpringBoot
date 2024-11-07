@@ -6,6 +6,7 @@ import org.springframework.web.servlet.HandlerExceptionResolver;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 
+import io.jsonwebtoken.ExpiredJwtException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.ConstraintViolationException;
@@ -23,6 +24,13 @@ class RestResponseStatusExceptionResolver implements HandlerExceptionResolver {
 			response.setStatus(HttpStatus.UNPROCESSABLE_ENTITY.value());
 			model.addObject("message", exception.getMessage());
 			model.addObject("statusCode", HttpStatus.UNPROCESSABLE_ENTITY);
+			model.addObject("stack", exception.getCause());
+			return model;
+		}
+		if (exception instanceof ExpiredJwtException) {
+			response.setStatus(HttpStatus.UNAUTHORIZED.value());
+			model.addObject("message", exception.getMessage());
+			model.addObject("statusCode", HttpStatus.UNAUTHORIZED.value());
 			model.addObject("stack", exception.getCause());
 			return model;
 		}
