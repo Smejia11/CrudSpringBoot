@@ -1,5 +1,5 @@
 # CRUDSPRINGBOOT
-**Empower Seamless Data Management, Accelerate Innovation**
+
 
 [![Java](https://img.shields.io/badge/Java-007396?logo=java&logoColor=white)](https://www.java.com/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
@@ -11,8 +11,6 @@
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-  - [Usage](#usage)
-  - [Testing](#testing)
 
 ---
 
