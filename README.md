@@ -19,7 +19,7 @@
 RESTful APIs using Spring Boot.  
 It provides essential components for efficient data management, authentication, and error handling.
 
-### Why CrudSpringBoot?
+### Why spring-boot-jwt-auth-example
 
 This project streamlines backend development by integrating core functionalities such as:
 
