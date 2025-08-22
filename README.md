@@ -1,4 +1,4 @@
-# CRUDSPRINGBOOT
+# spring-boot-jwt-auth-example
 
 
 [![Java](https://img.shields.io/badge/Java-007396?logo=java&logoColor=white)](https://www.java.com/)
@@ -48,4 +48,4 @@ Build CrudSpringBoot from the source and install dependencies:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/YourUser/CrudSpringBoot
+   git clone https://github.com/YourUser/spring-boot-jwt-auth-example
